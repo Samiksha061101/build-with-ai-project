@@ -14,7 +14,20 @@ with app.app_context():
 # Routes for HTML pages
 @app.route('/')
 def dashboard():
-    return render_template('dashboard.html')
+    return """
+    <h1>Smart Hotel Security System</h1>
+    <p>AI-assisted hotel visitor verification project built using Flask and SQLite.</p>
+    <h3>Features</h3>
+    <ul>
+        <li>Visitor check-in</li>
+        <li>ID verification</li>
+        <li>Stolen ID detection</li>
+        <li>Face scan simulation</li>
+        <li>Threat logging</li>
+        <li>Admin monitoring APIs</li>
+    </ul>
+    <p>Project is deployed successfully.</p>
+    """
 
 @app.route('/scan')
 def scan():
